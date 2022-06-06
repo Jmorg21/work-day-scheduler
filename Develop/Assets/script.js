@@ -1,6 +1,6 @@
 
 $('#currentDay').text(moment().format('dddd, MMMM Do'));
-
+//function to update color//
 function updateColor() {
   var currentHour = moment().hour();
   
@@ -21,7 +21,7 @@ function updateColor() {
       }
   })
 };
-
+//save button and local storage//
 $(document).ready(function () {
   $(".saveBtn").on('click', function () {
     var text = $(this).siblings('description').val();
@@ -40,7 +40,7 @@ $(document).ready(function () {
   $("#15 .description").val(localStorage.getItem("15"));
   $("#16 .description").val(localStorage.getItem("16"));
   $("#17 .description").val(localStorage.getItem("17"));
-
+//calling color update function//
   updateColor()
 })
 
